@@ -1,0 +1,38 @@
+<html>
+<head>
+    
+<title>INF1339 Project 3</title>
+<script>
+function fibonacci (number) {
+     //if number is 1 or 2  just return 1
+    number=parseInt(number)
+    if (0<number<=2){
+        return 1
+    }
+    
+     //otherwise return sum of fibonacci of previous two numbers
+    else{
+        return (fibonacci(number-1)+fibonacciibonacci(number-2))
+        
+    }
+     }
+
+function compute_and_display () {
+     // get the value from the input
+    var getInputValue = document.getElementById("number").value
+     //result = fibonacci(input)
+    var resultInputValue = fibonacci (getInputValue)
+     //display result on the webpage
+    document.getElementById("output_goes_here").innerHTML=  resultInputValue
+     }
+
+</script>
+</head>
+<body>
+<!-- USER INPUTS A NUMBER -->
+<input type="number" placeholder="Type a number" id="number">
+<!--BUTTON THAT RUNS "compute_and_display()" -->
+<button type="button" onclick="compute_and_display();">Get Value</button>
+<hr/><p id="output_goes_here"></p>
+</body>
+</html>
